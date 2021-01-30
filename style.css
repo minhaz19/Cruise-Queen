@@ -125,3 +125,21 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+
+#passengerDetails{
+    display: none;
+}
+
+ .form{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 65%;
+    margin-left: 180px;
+} 
+
+.passenger-group{
+    padding: 3px 10px;
+    font-size: 20px;
+}

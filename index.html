@@ -29,7 +29,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="mainPage" class="main-content container">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
@@ -102,13 +102,47 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p id="total">$550</p>
+                        <p id="total">550</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="booking" class="btn-style">Book Now</button>
         </div>
     </main>
+
+    <!-- Passenger Information section -->
+    
+    <section class="main-content container mt-3" id="passengerDetails">
+        <div class="form">
+            <h3>Passenger Details</h3>
+            <div class="passenger-group">
+                <label for="">Name</label>
+                <input class="form-control" type="text" name="" placeholder="Enter your name">
+            </div>
+            <div class="passenger-group">
+                <label for="">Age</label>
+                <input class="form-control" type="number" name="" placeholder="Enter your age">
+            </div>
+            <div class="passenger-group">
+                    <label for="">Gender</label> <br> 
+                    <p>
+                    <input type="radio" name="gender" value="male">Male  
+                    <input type="radio" name="gender" value="female">Female
+                    </p>
+            </div>
+            <div class="passenger-group">
+                <label for="">Email</label>
+                <input class="form-control" type="email" placeholder="Enter your email">
+            </div>
+            <div class="passenger-group">
+                <label for="">Mobile Number</label>
+                <input class="form-control" type="number" placeholder="Enter your Number">
+            </div>
+            <hr>
+            <button class="passenger-group btn btn-danger" type="submit">Confirm Reservation</button>
+        </div>
+    </section>
+
 
     <script>
         function classDesignation(category,isIncrease){
@@ -143,6 +177,15 @@
             const countNumber = parseInt(countInput.value);
             return countNumber; 
         }
+
+        // after clicking Book Now
+
+        document.getElementById('booking').addEventListener("click",function(){
+            const mainPage = document.getElementById('mainPage');
+            mainPage.style.display = "none";
+            const passengerDetails = document.getElementById("passengerDetails");
+            passengerDetails.style.display = "block";
+        })
     </script>
     <!--Thank You-->
 </body>
